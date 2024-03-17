@@ -1,7 +1,7 @@
 ## Getting Started
 
 ```bash
-clone project
+git clone https://github.com/alexmolod/Nextjs-Metamask-Login.git
 ```
 
 ```bash
