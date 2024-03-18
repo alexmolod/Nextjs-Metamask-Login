@@ -10,10 +10,12 @@ const MetamaskBtn = ({setAccountData, setAuthSecret}) => {
           throw new Error(`invalid ethereum provider`);
         }
     
-         sdk?.connect()
+         sdk?.connectAndSign({
+          msg: "Connect + Sign message",
+      })
           .then((accounts) => {
             if (accounts) {
-							setAccountData(accounts?.[0])
+							setAccountData(accounts)
             }
           })
           .catch((e) => console.log('request accounts ERR', e));
